@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0f1c;
+  --foreground: #e8eef7;
+  --accent: #5fe3c0;
+  --accent-2: #4ade80;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lenis controls scrolling once mounted; disable native smooth to avoid conflict */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  /* layered radial "aurora" glow for depth, fixed to the viewport */
+  background-image:
+    radial-gradient(
+      60rem 50rem at 12% -10%,
+      rgba(95, 227, 192, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      50rem 40rem at 100% 8%,
+      rgba(74, 222, 128, 0.07),
+      transparent 55%
+    ),
+    radial-gradient(
+      70rem 60rem at 50% 120%,
+      rgba(95, 227, 192, 0.06),
+      transparent 60%
+    );
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #5fe3c0;
+  color: #06210f;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #25344f;
+  border-radius: 9999px;
+  border: 2px solid #0a0f1c;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5fe3c0;
+}
+
+@layer components {
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-[0.28em] text-terracotta;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-offset-2 ring-offset-cream focus-visible:ring-2 focus-visible:ring-terracotta;
+  }
+
+  /* faint hairline used on dark cards */
+  .hairline {
+    @apply border border-white/10;
+  }
+}
+
+@layer utilities {
+  /* neon-style glow for accent text */
+  .text-glow {
+    text-shadow:
+      0 0 18px rgba(95, 227, 192, 0.55),
+      0 0 42px rgba(95, 227, 192, 0.25);
+  }
+  .glow-ring {
+    box-shadow:
+      0 0 0 1px rgba(95, 227, 192, 0.25),
+      0 0 28px -6px rgba(95, 227, 192, 0.5);
+  }
+}
+
+/* CRT / scanline overlay for the retro Mac screen */
+.crt-overlay {
+  background:
+    linear-gradient(rgba(8, 12, 20, 0) 50%, rgba(8, 12, 20, 0.18) 50%),
+    linear-gradient(90deg, rgba(95, 227, 192, 0.05), rgba(74, 222, 128, 0.04));
+  background-size: 100% 4px, 100% 100%;
+  mix-blend-mode: overlay;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
