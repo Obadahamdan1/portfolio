@@ -22,11 +22,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Obada — Portfolio",
-  description: "[INTRO] — software, hardware, and art.",
+  title: "Obada Hamdan",
+  description:
+    "Obada Hamdan — AI Engineer in Amman, Jordan. Building LLM-powered agents, NLP systems, and AI that solves real problems.",
   openGraph: {
-    title: "Obada — Portfolio",
-    description: "[INTRO] — software, hardware, and art.",
+    title: "Obada Hamdan",
+    description:
+      "AI Engineer in Amman, Jordan. Building LLM-powered agents, NLP systems, and AI that solves real problems.",
     type: "website",
   },
 };

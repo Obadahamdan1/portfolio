@@ -37,3 +37,4 @@ next-env.d.ts
 /Screenshot*.png
 /efcc0cc5-*.jpg
 .vscode/
+/pfpgithub*.png
