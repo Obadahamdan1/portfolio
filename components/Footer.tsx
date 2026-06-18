@@ -1,5 +1,6 @@
 import { Mail, Github, Linkedin } from "lucide-react";
 import { PROFILE } from "@/lib/content";
+import LetterboxdIcon from "@/components/LetterboxdIcon";
 
 export default function Footer() {
   return (
@@ -28,6 +29,9 @@ export default function Footer() {
             </FooterIcon>
             <FooterIcon href={PROFILE.linkedin} label="LinkedIn" external>
               <Linkedin size={20} />
+            </FooterIcon>
+            <FooterIcon href={PROFILE.letterboxd} label="Letterboxd" external>
+              <LetterboxdIcon size={20} />
             </FooterIcon>
           </div>
         </div>

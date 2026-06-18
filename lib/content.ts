@@ -12,6 +12,7 @@ export const PROFILE = {
   email: "obadahamdan004@gmail.com",
   github: "https://github.com/Obadahamdan1",
   linkedin: "https://www.linkedin.com/in/obada-hamdan-6b5444323",
+  letterboxd: "https://letterboxd.com/obadahamdan/",
 };
 
 export const NAV_LINKS = [
