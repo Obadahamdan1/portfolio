@@ -12,7 +12,6 @@ export const PROFILE = {
   email: "obadahamdan004@gmail.com",
   github: "https://github.com/Obadahamdan1",
   linkedin: "https://www.linkedin.com/in/obada-hamdan-6b5444323",
-  letterboxd: "https://letterboxd.com/obadahamdan/",
 };
 
 export const NAV_LINKS = [
@@ -25,7 +24,7 @@ export const NAV_LINKS = [
 export const ABOUT = {
   bio: [
     "I'm an AI Engineer intern at NourNet, where I build SOC agents that autonomously investigate security tickets. My work spans LLM orchestration, model fine-tuning, and wiring agents to real tools via MCP.",
-    "In my free time, you'll find me watching movies so add me on Letterboxd, hanging out with friends, gaming, or obsessing over the latest hardware drop. Oh, and trying to keep up with AI, which somehow keeps getting more interesting every week.",
+    "In my free time, you'll find me watching movies , hanging out with friends, gaming, or obsessing over the latest hardware drop. Oh, and trying to keep up with AI, which somehow keeps getting more interesting every week.",
   ],
   technologies: [
     "Python",

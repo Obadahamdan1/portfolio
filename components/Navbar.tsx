@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Mail, Github, Linkedin, Menu, X } from "lucide-react";
 import { NAV_LINKS, PROFILE } from "@/lib/content";
-import LetterboxdIcon from "@/components/LetterboxdIcon";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -58,9 +57,6 @@ export default function Navbar() {
           <IconLink href={PROFILE.linkedin} label="LinkedIn" external>
             <Linkedin size={18} />
           </IconLink>
-          <IconLink href={PROFILE.letterboxd} label="Letterboxd" external>
-            <LetterboxdIcon size={18} />
-          </IconLink>
         </div>
 
         {/* Mobile toggle */}
@@ -99,9 +95,6 @@ export default function Navbar() {
               </IconLink>
               <IconLink href={PROFILE.linkedin} label="LinkedIn" external>
                 <Linkedin size={20} />
-              </IconLink>
-              <IconLink href={PROFILE.letterboxd} label="Letterboxd" external>
-                <LetterboxdIcon size={20} />
               </IconLink>
             </li>
           </ul>
